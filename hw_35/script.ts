@@ -46,7 +46,14 @@ const users: User[] = [
 ]
 
 const getUserNames: string = users.map((item: User) => item.name).join(', ')
-const getCountOfCars: number = users.filter((item: User) => item.cars).map((item: User) => item.cars).flat(1).length
+const getCountOfCars: number = users
+   .filter((item: User) => item.cars)
+   .map((item: User) => item.cars)
+   .flat(1).length
 const getFilterOfEducation: object = users.filter((item: User) => item.hasEducation)
 const getFilterOfAnimals: object = users.filter((item: User) => item.animals)
-const getCarNames: string = users.filter((item: User) => item.cars).map((item: User) => item.cars).flat(1).join(', ')
+const getCarNames: string = users
+   .filter((item: User) => item.cars)
+   .map((item: User) => item.cars)
+   .flat(1)
+   .join(', ')
